@@ -40,8 +40,7 @@ class Song
     self.all.sort_by{|s| s.name}
   end
   
-  def self.create_from_filename(filename)
-    
+ def self.create_from_filename(filename)
     parts = filename.split(" - ")
     artist_name = parts[0]
     song_name = parts[1].gsub(".mp3", "")
@@ -51,7 +50,6 @@ class Song
     song.artist_name = artist_name
     song
   end
-  
   def self.destroy_all
     self.all.clear
   end
